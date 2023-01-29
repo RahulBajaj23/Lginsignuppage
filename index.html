@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Signup page-Rahul Bajaj</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div id="hero-page" class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" onclick="login()" class="toggle-btn" >Log In</button>
+                <button type="button" onclick="SignUp()" class="toggle-btn" >Sign Up</button>
+            </div>
+            <div class="icons">
+                <img src="fb.png">
+                <img src="t.png">
+                <img src="g.png">
+            </div>
+            <form id ="login" class ="input-group">
+                <input type="text" class="input-field" placeholder="Enter User id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box" ><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form id ="SignUp" class ="input-group">
+                <input type="text" class="input-field" placeholder="User id" required>
+                <input type="text" class="input-field" placeholder="Email id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box" ><span>I agreed to the terms & condition</span>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+
+        </div>
+
+            </div>
+    <script>
+        var x=document.getElementById("login")
+        var y=document.getElementById("SignUp")
+        var z=document.getElementById("btn")
+
+        function SignUp(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110";
+
+        }
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0";
+        }
+    </script>
+    <script>
+        var modal=document.getElementById("hero-page");
+        window.onclick=function(event)
+        {
+            if (event.target==modal)
+            {
+                modal.style.display="none";
+            }
+        }
+    </script>
+
+</body>
+</html>
